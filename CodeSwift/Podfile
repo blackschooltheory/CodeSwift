@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CodeSwift' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  ##自动布局
+  pod 'SnapKit'
+  #网络图片
+  pod 'Kingfisher'
+  #分页
+  pod 'DNSPageView'
+  #基于Swift插值方式优雅的构建富文本
+  pod 'AttributedString'
+  #YYText swift版
+  pod 'BSText'
+  pod 'YYWebImage'
+  pod 'Alamofire'
+  pod 'Moya'
+  pod 'HandyJSON'
+  pod 'MJRefresh'
+  #swift charts图表
+  pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
+end
