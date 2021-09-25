@@ -29,6 +29,28 @@ func IsIphoneX()->Bool{
     }
     return iphoneX
 }
+//MARK:判断是否是全面屏
+func IsNoHome() -> Bool {
+    var noHome = false
+    if UIDevice.current.userInterfaceIdiom != .phone {
+        // 判断ipad 是不是全面屏
+        let window:UIWindow = (UIApplication.shared.delegate?.window!!)!
+        if window.safeAreaInsets.bottom > 0 {
+            // 当有安全区域时，说明是全面屏
+            return true
+        }
+        return false
+    }
+    
+    if #available(iOS 11.0, *) {
+        //判断iPhone是全面屏
+        let window:UIWindow = (UIApplication.shared.delegate?.window!!)!
+        if window.safeAreaInsets.bottom > 0 {
+            noHome = true
+            // 当有安全区域时，说明是iPhoneX 以上的全面屏
+        }
+    }
+}
 
 //颜色转换成图片
 func ImageFromColorSize(color:UIColor,size:CGSize) -> UIImage {

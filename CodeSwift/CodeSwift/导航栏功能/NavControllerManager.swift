@@ -39,11 +39,14 @@ class NavControllerManager: NSObject {
     
     //MARK:根据颜色设置背景图片
     func backImageWithColor(target:UINavigationController, color:UIColor,size:CGSize) {
-        //通过次粗女，颜色生成图片
+        //通过，颜色生成图片
         let image = ImageFromColorSize(color: color, size: size)
         target.navigationBar.setBackgroundImage(image, for: .default)
     }
+    //MARK:导航栏渐变颜色
     
+    
+    //MARK:导航栏动画效果
     
     
 }
