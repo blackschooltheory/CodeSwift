@@ -50,6 +50,7 @@ func IsNoHome() -> Bool {
             // 当有安全区域时，说明是iPhoneX 以上的全面屏
         }
     }
+    return false
 }
 
 //颜色转换成图片

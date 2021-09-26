@@ -26,7 +26,7 @@ func DLKWith(size:Float) -> CGFloat {
 }
 //MARK:按照ipad 与iPhone的不同来设计屏幕尺寸
 func ChangeWidth(size:Float) -> CGFloat {
-    if UIDevice.current.userInterfaceIdiom = .pad {
+    if UIDevice.current.userInterfaceIdiom == .pad {
         // ipad
         return DLKWith(size: size)
     }

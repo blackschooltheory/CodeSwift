@@ -29,14 +29,32 @@ class HomeViewControllView: UIViewController {
         
     }
     @objc func btnClick(){
-        let vc = TableVC.init()
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vc = TableVC.init()
+//        vc.hidesBottomBarWhenPushed = true
+//        self.navigationController?.pushViewController(vc, animated: true)
         
 //        let vc = ViewController.init()
 //        vc.hidesBottomBarWhenPushed = true
 //        self.navigationController?.pushViewController(vc, animated: true)
         
+        //test file create
+        let fileManage = DLKFileManage.init()
+        let path = NSHomeDirectory() + "/Library/dlkcache"
+        
+//       let createResult = fileManage.createFileDir(path: path)
+//
+//        if createResult {
+//            print("创建成功")
+//        }else{
+//            print("失败")
+//        }
+        let removeResult = fileManage.removeFileDir(path: path)
+        
+        if removeResult {
+            print("成功")
+        }else{
+            print("失败")
+        }
     }
 
     /*
