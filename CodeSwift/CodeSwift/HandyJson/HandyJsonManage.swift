@@ -41,7 +41,6 @@ class HandyJsonManage: NSObject {
         dicToModel(dic: dicJson as! [String:Any], structName: "jsonModel")
     }
     //MARK:自动打印模型的表单
-    
     func dicToModel(dic:[String:Any],structName:String) {
         var arrOrDic:[String:Any] = [:]
         print("struct \(structName):HandyJSON{")

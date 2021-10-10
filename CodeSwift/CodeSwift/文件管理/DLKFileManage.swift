@@ -40,6 +40,9 @@ class DLKFileManage: NSObject {
         if path == nil  {
             return false
         }
-        fileManage.createFile(atPath:path!, contents: Data.init(base64Encoded: "胆囊结石难分难舍年时间单刷"), attributes: <#T##[FileAttributeKey : Any]?#>)
+        return fileManage.createFile(atPath:path!, contents: Data.init(base64Encoded: "胆囊结石难分难舍年时间单刷"), attributes: [:])
     }
+    
+    
+    
 }

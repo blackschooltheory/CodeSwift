@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040F844427033682009D9D48 /* JSONWithDic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F844327033682009D9D48 /* JSONWithDic.swift */; };
 		0425F2CF26F8721A005AA27B /* MJRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425F2CE26F8721A005AA27B /* MJRefreshManager.swift */; };
 		0425F2D126F875E6005AA27B /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425F2D026F875E6005AA27B /* TableVC.swift */; };
 		0439081426E63FBD008D48CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439081326E63FBD008D48CF /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040F844327033682009D9D48 /* JSONWithDic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONWithDic.swift; sourceTree = "<group>"; };
 		0425F2CE26F8721A005AA27B /* MJRefreshManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJRefreshManager.swift; sourceTree = "<group>"; };
 		0425F2D026F875E6005AA27B /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
 		0439081026E63FBD008D48CF /* CodeSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040F84412701FDD5009D9D48 /* cell自适应高度 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "cell自适应高度";
+			sourceTree = "<group>";
+		};
+		040F844227033656009D9D48 /* JSONWithDic */ = {
+			isa = PBXGroup;
+			children = (
+				040F844327033682009D9D48 /* JSONWithDic.swift */,
+			);
+			path = JSONWithDic;
+			sourceTree = "<group>";
+		};
 		0425F2C926F86527005AA27B /* 导航栏功能 */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +137,11 @@
 		0439081226E63FBD008D48CF /* CodeSwift */ = {
 			isa = PBXGroup;
 			children = (
+				04EA9D33270527B700BA05AF /* 数据转换 */,
+				04EA9D322705278B00BA05AF /* QLPreViewController */,
+				04EA9D302705243A00BA05AF /* WKWebView */,
+				040F844227033656009D9D48 /* JSONWithDic */,
+				040F84412701FDD5009D9D48 /* cell自适应高度 */,
 				0482884E270132130022FD55 /* throw */,
 				0482884D270131FC0022FD55 /* 属性闭包 */,
 				04C33F902700B8C10087720F /* 文件管理 */,
@@ -203,6 +225,35 @@
 				0482884B270131370022FD55 /* DLKFileManage.swift */,
 			);
 			path = "文件管理";
+			sourceTree = "<group>";
+		};
+		04EA9D302705243A00BA05AF /* WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				04EA9D312705244900BA05AF /* 截屏 */,
+			);
+			path = WKWebView;
+			sourceTree = "<group>";
+		};
+		04EA9D312705244900BA05AF /* 截屏 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "截屏";
+			sourceTree = "<group>";
+		};
+		04EA9D322705278B00BA05AF /* QLPreViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QLPreViewController;
+			sourceTree = "<group>";
+		};
+		04EA9D33270527B700BA05AF /* 数据转换 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "数据转换";
 			sourceTree = "<group>";
 		};
 		53937B2900C5009E416EEC19 /* Pods */ = {
@@ -345,6 +396,7 @@
 				04B631D226FB6FC0002822FF /* HandyJsonManage.swift in Sources */,
 				0439081826E63FBD008D48CF /* ViewController.swift in Sources */,
 				0439081426E63FBD008D48CF /* AppDelegate.swift in Sources */,
+				040F844427033682009D9D48 /* JSONWithDic.swift in Sources */,
 				04B631D026FB67C4002822FF /* NavControllerManager.swift in Sources */,
 				04A0505526F38054006C5397 /* Common.swift in Sources */,
 				0478781126FCB7ED000CF602 /* PXCommon.swift in Sources */,
