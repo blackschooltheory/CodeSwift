@@ -7,7 +7,38 @@
 
 import UIKit
 
-class HomeViewControllView: UIViewController {
+class HomeViewControllView: UIViewController, UIDragInteractionDelegate, UIDropInteractionDelegate {
+    func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
+        
+        let provider = NSItemProvider.init(object: "this is item" as NSItemProviderWriting)
+        let dragItem = UIDragItem.init(itemProvider: provider)
+        return [dragItem]
+        
+    }
+    func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
+        return true
+    }
+    func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
+        return UIDropProposal.init(operation: .copy)
+    }
+
+    func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
+        for item in session.items {
+                let itemProvider = item.itemProvider
+                guard itemProvider.canLoadObject(ofClass: String.self)
+                else {continue}
+
+                itemProvider.loadObject(ofClass: String.self, completionHandler: { (object, error) in
+                    print("哈哈哈")
+                    if let str = object as? String {
+                        print(str)
+//                        DispatchQueue.main.async {
+//                            self.imageView.image = image
+//                        }
+                    }
+                })
+            }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +57,33 @@ class HomeViewControllView: UIViewController {
         btn.backgroundColor = .purple
         self.view.addSubview(btn)
         btn.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
+        
+        
+        let view = UIView.init(frame: CGRect.init(x: 100, y: 300, width: 100, height: 100))
+        view.backgroundColor = .purple
+        
+        self.view.addSubview(view)
+        
+        let dragAction = UIDragInteraction.init(delegate: self)
+        dragAction.isEnabled = true
+        view.addInteraction(dragAction)
+        
+        
+        
+        let label = UILabel.init(frame: CGRect.init(x: 100, y: 500, width: 300, height: 150))
+        label.text = "label"
+        label.backgroundColor = .brown
+        label.isUserInteractionEnabled = true
+        self.view.addSubview(label)
+        
+        let dropAction = UIDropInteraction.init(delegate: self)
+    
+        label.addInteraction(dropAction)
+        
+        
+        
+        
+        
         
     }
     @objc func btnClick(){
